@@ -34,18 +34,17 @@ const searchPokedex = async () => {
     specialAttack.innerHTML = stats[3].base_stat;
     specialDefense.innerHTML = stats[4].base_stat;
     speed.innerHTML = stats[5].base_stat;
-    }
-    catch(err) {
-      console.log(err);
-      alert('Pokemon not found');
-    }
-}
+  }
+  catch(err) {
+    console.log(err);
+    alert('Pokemon not found');
+  }
+};
 document.addEventListener('DOMContentLoaded', () => {
-  submitBtn.addEventListener("click", searchPokedex);
-  userInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    searchPokedex();
-   }
+  submitBtn.addEventListener('click', searchPokedex);
+  userInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+      searchPokedex();
+    }
   });
-  
 });
