@@ -45,4 +45,13 @@ const searchPokedex = async () => {
       console.log(err);
       alert('Pokemon not found');
     }
-  }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  submitBtn.addEventListener("click", searchPokedex);
+  userInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    searchPokedex();
+   }
+  });
+  
+});
