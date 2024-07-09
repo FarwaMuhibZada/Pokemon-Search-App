@@ -21,7 +21,7 @@ const searchPokedex = async () => {
     const data = await res.json();
     console.log(data);
     const { name, id, weight, height, types, stats, sprites } = data;
-  
+
     pokemonImage.innerHTML = `<img src='${sprites.front_default}' id='sprite'>`;
     pokemonName.innerHTML = name.toUpperCase();
     pokemonId.innerHTML = `#${id}`;
@@ -34,8 +34,7 @@ const searchPokedex = async () => {
     specialAttack.innerHTML = stats[3].base_stat;
     specialDefense.innerHTML = stats[4].base_stat;
     speed.innerHTML = stats[5].base_stat;
-  }
-  catch(err) {
+  } catch (err) {
     console.log(err);
     alert('Pokemon not found');
   }
@@ -43,7 +42,7 @@ const searchPokedex = async () => {
 document.addEventListener('DOMContentLoaded', () => {
   submitBtn.addEventListener('click', searchPokedex);
   userInput.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') {
+    if (e.key === 'Enter') {
       searchPokedex();
     }
   });
