@@ -15,7 +15,7 @@ include these functionalities:
 
 ## Demo 📸
 
-life demo link [(https://farwamuhibzada.github.io/Cash_Register_App/)]
+life demo link [(https://farwamuhibzada.github.io/Pokemon-Search-App/)]
 
 
 ![first page](./Capture.PNG)
